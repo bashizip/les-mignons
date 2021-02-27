@@ -10,11 +10,20 @@
   the License.
   -->
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Principals  -->
+    <color name="jacksons_purple_200">#554eab</color>
+    <color name="jacksons_purple_500">#1f267b</color>
+    <color name="jacksons_purple_700">#00004e</color>
+    <color name="matrix_200">#e69198</color>
+    <color name="matrix_500">#b2626a</color>
+    <color name="matrix_700">#80353f</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <!-- Complementary   -->
+    <color name="gulf_stream">#82AEB3</color>
+    <color name="domino">#997B60</color>
+    <color name="mystic">#DFE8EA</color>
+
 </resources>
