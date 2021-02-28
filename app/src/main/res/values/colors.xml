@@ -26,6 +26,5 @@
     <color name="domino">#997B60</color>
     <color name="mystic">#DFE8EA</color>
     <color name="gray_light">#F6F6F6</color>
-
-
+    <color name="gray_lighter">#C7C7CA</color>
 </resources>

@@ -1,5 +1,7 @@
 package com.example.androiddevchallenge.domain
 
+import java.io.Serializable
+
 class Mignon(
     var id: Int,
     var name: String,

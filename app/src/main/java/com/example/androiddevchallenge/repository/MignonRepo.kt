@@ -11,7 +11,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 1,
             name = "Clyde",
-            "Chat",
+            "Dog",
             age = 2,
             photo = R.drawable.mignon1,
             adress = "Kinshasa"
@@ -19,7 +19,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 2,
             name = "Argos",
-            "Chat",
+            "Dog",
             age = 6,
             photo = R.drawable.mignon2,
             adress = "Kinshasa"
@@ -27,7 +27,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 3,
             name = "Alfred",
-            "Chat",
+            "Dog",
             age = 3,
             photo = R.drawable.mignon3,
             adress = "Kinshasa"
@@ -35,7 +35,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 4,
             name = "Barkley",
-            "Chat",
+            "Dog",
             age = 2,
             photo = R.drawable.mignon4,
             adress = "Kinshasa"
@@ -43,7 +43,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 5,
             name = "Clyde",
-            "Chat",
+            "Dog",
             age = 3,
             photo = R.drawable.mignon5,
             adress = "Kinshasa"
@@ -51,7 +51,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 6,
             name = "Alfred",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon6,
             adress = "Kinshasa"
@@ -59,7 +59,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 7,
             name = "Jesse",
-            "Chat",
+            "Dog",
             age = 4,
             photo = R.drawable.mignon7,
             adress = "Kinshasa"
@@ -67,7 +67,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 8,
             name = "Jesse",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon8,
             adress = "Kinshasa"
@@ -75,7 +75,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 9,
             name = "Coby",
-            "Chat",
+            "Dog",
             age = 2,
             photo = R.drawable.mignon9,
             adress = "Kinshasa"
@@ -83,7 +83,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 10,
             name = "Maple",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon10,
             adress = "Kinshasa"
@@ -91,7 +91,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 11,
             name = "Gandalf",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon11,
             adress = "Kinshasa"
@@ -99,7 +99,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 12,
             name = " Adonis",
-            "Chat",
+            "Dog",
             age = 2,
             photo = R.drawable.mignon12,
             adress = "Kinshasa"
@@ -107,7 +107,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 13,
             name = " Adonis",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon13,
             adress = "Kinshasa"
@@ -115,7 +115,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 14,
             name = " Groot",
-            "Chat",
+            "Dog",
             age = 3,
             photo = R.drawable.mignon14,
             adress = "Kinshasa"
@@ -123,7 +123,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 15,
             name = " Anubis",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon15,
             adress = "Kinshasa"
@@ -131,7 +131,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 16,
             name = "Griffin",
-            "Chat",
+            "Dog",
             age = 1,
             photo = R.drawable.mignon16,
             adress = "Kinshasa"
@@ -139,7 +139,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
         Mignon(
             id = 17,
             name = "Dallas",
-            "Chat",
+            "Dog",
             age = 4,
             photo = R.drawable.mignon17,
             adress = "Kinshasa"
