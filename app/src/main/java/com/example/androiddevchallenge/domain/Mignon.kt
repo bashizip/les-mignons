@@ -5,4 +5,6 @@ class Mignon(
     var name: String,
     var type: String,
     var age: Int,
-    var adress: String)
+    var photo: Int,
+    var adress: String
+)

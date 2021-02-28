@@ -14,11 +14,12 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/jacksons_purple_500</item>
         <item name="colorPrimaryVariant">@color/jacksons_purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/gray_light</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/matrix_200</item>
         <item name="colorSecondaryVariant">@color/matrix_700</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="android:panelColorBackground">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
