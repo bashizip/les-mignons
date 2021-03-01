@@ -14,7 +14,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 2,
             photo = R.drawable.mignon1,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 2,
@@ -22,15 +22,15 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 6,
             photo = R.drawable.mignon2,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
-            id = 3,
-            name = "Alfred",
-            "Dog",
+            id = 3, 
+            name = "Amos",
+            type="Dog",
             age = 3,
             photo = R.drawable.mignon3,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 4,
@@ -38,7 +38,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 2,
             photo = R.drawable.mignon4,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 5,
@@ -46,7 +46,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 3,
             photo = R.drawable.mignon5,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 6,
@@ -54,7 +54,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon6,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 7,
@@ -62,7 +62,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 4,
             photo = R.drawable.mignon7,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 8,
@@ -70,7 +70,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon8,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 9,
@@ -78,7 +78,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 2,
             photo = R.drawable.mignon9,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 10,
@@ -86,7 +86,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon10,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 11,
@@ -94,7 +94,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon11,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 12,
@@ -102,7 +102,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 2,
             photo = R.drawable.mignon12,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 13,
@@ -110,7 +110,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon13,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 14,
@@ -118,7 +118,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 3,
             photo = R.drawable.mignon14,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 15,
@@ -126,7 +126,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon15,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 16,
@@ -134,7 +134,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 1,
             photo = R.drawable.mignon16,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         ),
         Mignon(
             id = 17,
@@ -142,7 +142,7 @@ class MignonRepo(base: Context?) : ContextWrapper(base) {
             "Dog",
             age = 4,
             photo = R.drawable.mignon17,
-            adress = "Kinshasa"
+            adress = "3 av. Justice, Commune de la Gombe, Kinshasa, DR Congo"
         )
 
     )

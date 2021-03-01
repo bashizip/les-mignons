@@ -141,7 +141,7 @@ class MainActivity : AppCompatActivity() {
                     Text(
                         text = "Location",
                         fontSize = 14.sp,
-                        color = colorResource(id = R.color.gray_lighter),
+                        color = colorResource(id = R.color.gray_dark),
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(top = 8.dp)
                     )
@@ -221,7 +221,6 @@ class MainActivity : AppCompatActivity() {
                     .fillMaxWidth()
                     .padding(start = 16.dp, top = 8.dp)
 
-
             ) {
                 Text(
                     text = mignon.name,
@@ -234,14 +233,12 @@ class MainActivity : AppCompatActivity() {
                 Text(
                     text = mignon.type,
                     style = typography.body1,
-                    //fontWeight = FontWeight.Bold,
                     color = colorResource(id = R.color.gray_dark),
                     modifier = Modifier.padding(top = 4.dp)
                 )
                 Text(
                     text = "${mignon.age} years old",
                     style = typography.body1,
-                    //fontWeight = FontWeight.Bold,
                     color = colorResource(id = R.color.gray_dark),
                     modifier = Modifier.padding(top = 4.dp)
                 )
@@ -256,7 +253,6 @@ class MainActivity : AppCompatActivity() {
                         style = typography.body1,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
-                       // fontWeight = FontWeight.Bold,
                         color = colorResource(id = R.color.gray_dark),
                         modifier = Modifier.padding(top = 4.dp, bottom = 8.dp)
                     )

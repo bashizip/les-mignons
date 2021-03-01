@@ -29,6 +29,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.text.style.TextOverflow
 
 
 class MignonDetails : AppCompatActivity() {
@@ -36,7 +37,6 @@ class MignonDetails : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         window.setFlags(
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
@@ -45,20 +45,78 @@ class MignonDetails : AppCompatActivity() {
             MyTheme {
                 val mignonId: Int = intent.getIntExtra(EXTRA_MIGON, 0)
                 val mignon = MignonRepo(this).mignonsList[mignonId - 1]
-                DetailView(mignon)
+                MainLayout(mignon = mignon)
             }
         }
     }
 
     @Composable
-    fun MigonInfos(mignon: Mignon){
+    fun MainLayout(mignon: Mignon) {
         Box(
+            modifier = Modifier
+                .fillMaxSize()
+            ,
+            contentAlignment = Alignment.Center
+        ) {
+            Box(modifier = Modifier.fillMaxSize()) {
+                DetailView(mignon = mignon)
+            }
+            MigonInfos(mignon = mignon)
+        }
+    }
+
+    @Composable
+    fun MigonInfos(mignon: Mignon) {
+        Card(
+            elevation = 6.dp,
             modifier =
             Modifier
-                .padding(start = 32.dp, end = 32.dp)
-                .height(160.dp)
-                .background(colorResource(id = R.color.gray_dark))
-        ){
+                .padding(start = 32.dp, end = 32.dp, bottom = 52.dp)
+                .clip(shape = RoundedCornerShape(32.dp))
+                .height(130.dp)
+                .fillMaxWidth()
+        )
+        {
+            Column(
+                modifier = Modifier.padding(24.dp)
+
+            ) {
+                Text(
+                    text = mignon.name,
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(id = R.color.jacksons_purple_500),
+                    modifier = Modifier.padding(top = 4.dp)
+                    )
+
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(top = 4.dp)
+
+                ){
+                    Text(
+                        text = mignon.type,
+                        fontSize = 14.sp,
+                        color = colorResource(id = R.color.gray_dark),
+                        modifier = Modifier.weight(1f),
+
+                    )
+                    Text(
+                        text = "${mignon.age} years old",
+                        fontSize = 14.sp,
+                        color = colorResource(id = R.color.gray_dark),
+
+                    )
+                }
+
+                Text(
+                    text = mignon.adress,
+                    fontSize = 14.sp,
+                    color = colorResource(id = R.color.gray_dark),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.padding(top = 4.dp, bottom = 16.dp)
+                )
+            }
 
         }
     }
@@ -66,25 +124,22 @@ class MignonDetails : AppCompatActivity() {
     @Composable
     fun DetailView(mignon: Mignon) {
         Surface(color = MaterialTheme.colors.background) {
-            MignonDetails(mignon)
-        }
-    }
+            Column(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .background(color = colorResource(id = R.color.gray_light))
+            ) {
+                Image(
+                    painter = painterResource(id = mignon.photo),
+                    contentDescription = "",
+                    Modifier
+                        .fillMaxWidth()
+                        .height(400.dp),
+                    contentScale = ContentScale.Crop
+                )
 
-    @Composable
-    fun MignonDetails(mignon: Mignon) {
-        Column(
-            modifier = Modifier.fillMaxHeight()
-        ) {
-            Image(
-                painter = painterResource(id = mignon.photo),
-                contentDescription = "",
-                Modifier
-                    .fillMaxWidth()
-                    .height(400.dp),
-                contentScale = ContentScale.Crop
-            )
-
-            ProprioInfosPane()
+                ProprioInfosPane()
+            }
         }
     }
 
@@ -92,13 +147,15 @@ class MignonDetails : AppCompatActivity() {
     fun ProprioInfosPane() {
         Column(
             modifier = Modifier
-                .padding(top = 64.dp, start = 32.dp, bottom = 32.dp, end = 32.dp)
+                .padding(top = 96.dp, start = 32.dp, bottom = 64.dp, end = 32.dp)
+
         ) {
             Profile()
             Text(
                 text = stringResource(id = R.string.lorem_ipsum),
                 maxLines = 5,
-                color = colorResource(id = R.color.gray_dark),  modifier = Modifier
+                color = colorResource(id = R.color.gray_dark),
+                modifier = Modifier
                     .padding(top = 32.dp)
             )
             ButtonBar()
@@ -159,14 +216,14 @@ class MignonDetails : AppCompatActivity() {
                 .fillMaxWidth()
         ) {
             Button(
-                onClick = { /*TODO*/ },colors = ButtonDefaults.textButtonColors(
+                onClick = { /*TODO*/ }, colors = ButtonDefaults.textButtonColors(
                     backgroundColor = colorResource(id = R.color.jacksons_purple_500),
                 ),
 
-               modifier = Modifier
-                   .clip(shape = RoundedCornerShape(16.dp))
-                   .height(60.dp)
-                   .width(60.dp)
+                modifier = Modifier
+                    .clip(shape = RoundedCornerShape(24.dp))
+                    .height(60.dp)
+                    .width(80.dp)
 
             ) {
                 Image(
@@ -181,16 +238,18 @@ class MignonDetails : AppCompatActivity() {
                 ),
                 modifier = Modifier
                     .padding(start = 32.dp)
-                    .clip(shape = RoundedCornerShape(16.dp))
+                    .clip(shape = RoundedCornerShape(24.dp))
                     .width(150.dp)
                     .height(60.dp)
                     .weight(1f)
 
 
             ) {
-                Text("Adoption",
+                Text(
+                    "Adoption",
                     color = colorResource(id = R.color.white),
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
                 )
             }
         }
