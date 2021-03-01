@@ -234,15 +234,15 @@ class MainActivity : AppCompatActivity() {
                 Text(
                     text = mignon.type,
                     style = typography.body1,
-                    fontWeight = FontWeight.Bold,
-                    color = colorResource(id = R.color.gray_lighter),
+                    //fontWeight = FontWeight.Bold,
+                    color = colorResource(id = R.color.gray_dark),
                     modifier = Modifier.padding(top = 4.dp)
                 )
                 Text(
                     text = "${mignon.age} years old",
                     style = typography.body1,
-                    fontWeight = FontWeight.Bold,
-                    color = colorResource(id = R.color.gray_lighter),
+                    //fontWeight = FontWeight.Bold,
+                    color = colorResource(id = R.color.gray_dark),
                     modifier = Modifier.padding(top = 4.dp)
                 )
                 Row() {
@@ -256,8 +256,8 @@ class MainActivity : AppCompatActivity() {
                         style = typography.body1,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
-                        fontWeight = FontWeight.Bold,
-                        color = colorResource(id = R.color.gray_lighter),
+                       // fontWeight = FontWeight.Bold,
+                        color = colorResource(id = R.color.gray_dark),
                         modifier = Modifier.padding(top = 4.dp, bottom = 8.dp)
                     )
                 }

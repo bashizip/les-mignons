@@ -12,4 +12,5 @@
     <string name="app_name">AndroidDevChallenge</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="title_activity_migon_details">MigonDetails</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget sagittis diam, vitae aliquet mauris. Suspendisse laoreet eros et leo ultricies eleifend. Duis imperdiet at nunc porttitor fringilla. Ut feugiat sit amet justo ut efficitur. Aliquam mattis ex eu metus rhoncus, non tempor sapien pharetra. Pellentesque et sapien libero. Cras suscipit velit ut justo cursus hendrerit. Pellentesque malesuada purus nunc, a mattis urna dignissim vel.</string>
 </resources>
