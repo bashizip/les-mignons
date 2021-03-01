@@ -17,19 +17,19 @@ package com.example.androiddevchallenge
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.materialIcon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,6 +40,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -48,12 +49,6 @@ import com.example.androiddevchallenge.domain.Mignon
 import com.example.androiddevchallenge.repository.MignonRepo
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.ui.theme.typography
-import android.view.WindowManager
-
-import android.os.Build
-import android.view.KeyEvent
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.ui.text.style.TextAlign
 
 
 class MainActivity : AppCompatActivity() {
@@ -81,9 +76,8 @@ class MainActivity : AppCompatActivity() {
             MyToolbar()
             Column(
                 Modifier
-                    .clip(shape = RoundedCornerShape(24.dp))
+                    .clip(shape = RoundedCornerShape(32.dp))
                     .background(colorResource(id = R.color.gray_light))
-
             ) {
                 SearchBox()
                 MignonList(MignonRepo(LocalContext.current).mignonsList)
@@ -93,8 +87,30 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     fun SearchBox() {
+            TextField(
+                value = "",
+                onValueChange = { Log.d("MainActivity", it) },
+                label = { Text(text = "Search here") },
+                shape = RoundedCornerShape(16.dp),
+                leadingIcon = {
+                    Image(
+                        painter = painterResource(id = R.drawable.ic_baseline_search_24),
+                        contentDescription = "search Icon"
+                    )
+                },
+                colors = TextFieldDefaults.textFieldColors(
+                    focusedIndicatorColor = Color.Transparent,
+                    disabledIndicatorColor = Color.Transparent,
+                    unfocusedIndicatorColor = Color.Transparent,
+                    backgroundColor = colorResource(id = R.color.white),
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(32.dp)
+            )
+        }
 
-    }
+
 
     @Composable
     fun MyToolbar() {
@@ -176,7 +192,7 @@ class MainActivity : AppCompatActivity() {
         Row(
             Modifier
                 .clickable { showMigon(mignon) }
-                .padding(16.dp)
+                .padding(start = 32.dp, top = 32.dp, end = 32.dp)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
 
@@ -211,7 +227,7 @@ class MainActivity : AppCompatActivity() {
                     text = mignon.name,
                     color = MaterialTheme.colors.primary,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 24.sp,
+                    fontSize = 18.sp,
                     modifier = Modifier.padding(top = 4.dp)
 
                 )
@@ -233,7 +249,7 @@ class MainActivity : AppCompatActivity() {
                     Image(
                         painter = painterResource(id = R.drawable.ic_baseline_location_on_24),
                         contentDescription = "",
-                        modifier = Modifier.padding(top = 8.dp, end = 2.dp)
+                        modifier = Modifier.padding(top = 8.dp)
                     )
                     Text(
                         text = mignon.adress,
@@ -257,6 +273,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+    // Previews
 
     @Preview("Light Theme", widthDp = 360, heightDp = 640)
     @Composable
