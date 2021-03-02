@@ -263,7 +263,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showMignon(mignon: Mignon) {
         val intent = Intent(this, MignonDetails::class.java).apply {
-            putExtra(MignonDetails.EXTRA_MIGON, mignon.id)
+            putExtra(MignonDetails.EXTRA_MIGNON, mignon.id)
         }
         startActivity(intent)
     }

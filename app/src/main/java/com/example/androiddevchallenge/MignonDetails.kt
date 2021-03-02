@@ -44,7 +44,7 @@ class MignonDetails : AppCompatActivity() {
         )
         setContent {
             MyTheme {
-                val mignonId: Int = intent.getIntExtra(EXTRA_MIGON, 0)
+                val mignonId: Int = intent.getIntExtra(EXTRA_MIGNON, 0)
                 val mignon = MignonRepo(this).mignonsList[mignonId - 1]
                 MainLayout(mignon = mignon)
             }
@@ -261,7 +261,7 @@ class MignonDetails : AppCompatActivity() {
     @Preview(showBackground = true, widthDp = 360, heightDp = 640, name = "Detail view")
     @Composable
     fun DetailViewPreview() {
-        DetailView(
+        MainLayout(
             Mignon(
                 id = 17,
                 name = "Dallas",
@@ -273,13 +273,16 @@ class MignonDetails : AppCompatActivity() {
         )
     }
 
-    @Preview(showBackground = true, widthDp = 360, heightDp = 640, name = "Profile")
+    @Preview(showBackground = true, widthDp = 360, heightDp = 120, name = "Profile")
     @Composable
     fun ProfilePreview() {
-        Profile()
+        MyTheme {
+            Profile()
+        }
+
     }
 
     companion object {
-        const val EXTRA_MIGON: String = "mignon_extra"
+        const val EXTRA_MIGNON: String = "mignon_extra"
     }
 }
