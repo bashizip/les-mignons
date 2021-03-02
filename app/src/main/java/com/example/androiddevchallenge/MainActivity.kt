@@ -22,7 +22,6 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -72,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     fun MainLayout() {
-        Column() {
+        Column {
             MyToolbar()
             Column(
                 Modifier
@@ -87,29 +86,28 @@ class MainActivity : AppCompatActivity() {
 
     @Composable
     fun SearchBox() {
-            TextField(
-                value = "",
-                onValueChange = { Log.d("MainActivity", it) },
-                label = { Text(text = "Search here") },
-                shape = RoundedCornerShape(16.dp),
-                leadingIcon = {
-                    Image(
-                        painter = painterResource(id = R.drawable.ic_baseline_search_24),
-                        contentDescription = "search Icon"
-                    )
-                },
-                colors = TextFieldDefaults.textFieldColors(
-                    focusedIndicatorColor = Color.Transparent,
-                    disabledIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                    backgroundColor = colorResource(id = R.color.white),
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(32.dp)
-            )
-        }
-
+        TextField(
+            value = "",
+            onValueChange = { Log.d("MainActivity", it) },
+            label = { Text(text = "Search here") },
+            shape = RoundedCornerShape(16.dp),
+            leadingIcon = {
+                Image(
+                    painter = painterResource(id = R.drawable.ic_baseline_search_24),
+                    contentDescription = "search Icon"
+                )
+            },
+            colors = TextFieldDefaults.textFieldColors(
+                focusedIndicatorColor = Color.Transparent,
+                disabledIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent,
+                backgroundColor = colorResource(id = R.color.white),
+            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(32.dp)
+        )
+    }
 
 
     @Composable
@@ -182,16 +180,16 @@ class MainActivity : AppCompatActivity() {
         LazyColumn(
         ) {
             items(mignons) { m ->
-                MignoRow(mignon = m)
+                MignonRow(mignon = m)
             }
         }
     }
 
     @Composable
-    fun MignoRow(mignon: Mignon) {
+    fun MignonRow(mignon: Mignon) {
         Row(
             Modifier
-                .clickable { showMigon(mignon) }
+                .clickable { showMignon(mignon) }
                 .padding(start = 32.dp, top = 32.dp, end = 32.dp)
                 .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
@@ -243,7 +241,7 @@ class MainActivity : AppCompatActivity() {
                     color = colorResource(id = R.color.gray_dark),
                     modifier = Modifier.padding(top = 4.dp)
                 )
-                Row() {
+                Row {
                     Image(
                         painter = painterResource(id = R.drawable.ic_baseline_location_on_24),
                         contentDescription = "",
@@ -263,7 +261,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun showMigon(mignon: Mignon) {
+    private fun showMignon(mignon: Mignon) {
         val intent = Intent(this, MignonDetails::class.java).apply {
             putExtra(MignonDetails.EXTRA_MIGON, mignon.id)
         }
