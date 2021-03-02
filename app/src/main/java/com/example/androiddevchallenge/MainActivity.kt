@@ -150,7 +150,7 @@ class MainActivity : AppCompatActivity() {
                         text = "Kinshasa, DRC",
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colors.primary,
+                        color = colorResource(id = R.color.jacksons_purple_500),
                         textAlign = TextAlign.Center
                     )
                 }
@@ -223,8 +223,9 @@ class MainActivity : AppCompatActivity() {
 
             ) {
                 Text(
+
                     text = mignon.name,
-                    color = MaterialTheme.colors.primary,
+                    color = colorResource(id = R.color.jacksons_purple_500),
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
                     modifier = Modifier.padding(top = 4.dp)

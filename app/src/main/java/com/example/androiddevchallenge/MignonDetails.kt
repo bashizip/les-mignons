@@ -29,6 +29,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.Color.Companion.White
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 
 
@@ -52,16 +53,17 @@ class MignonDetails : AppCompatActivity() {
 
     @Composable
     fun MainLayout(mignon: Mignon) {
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-            ,
-            contentAlignment = Alignment.Center
-        ) {
-            Box(modifier = Modifier.fillMaxSize()) {
-                DetailView(mignon = mignon)
+        Column {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize(),
+                contentAlignment = Alignment.Center
+            ) {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    DetailView(mignon = mignon)
+                }
+                MigonInfos(mignon = mignon)
             }
-            MigonInfos(mignon = mignon)
         }
     }
 
@@ -87,25 +89,27 @@ class MignonDetails : AppCompatActivity() {
                     fontWeight = FontWeight.Bold,
                     color = colorResource(id = R.color.jacksons_purple_500),
                     modifier = Modifier.padding(top = 4.dp)
-                    )
+                )
 
                 Row(
-                    modifier = Modifier.fillMaxWidth().padding(top = 4.dp)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 4.dp)
 
-                ){
+                ) {
                     Text(
                         text = mignon.type,
                         fontSize = 14.sp,
                         color = colorResource(id = R.color.gray_dark),
                         modifier = Modifier.weight(1f),
 
-                    )
+                        )
                     Text(
                         text = "${mignon.age} years old",
                         fontSize = 14.sp,
                         color = colorResource(id = R.color.gray_dark),
 
-                    )
+                        )
                 }
 
                 Text(
@@ -183,7 +187,7 @@ class MignonDetails : AppCompatActivity() {
             ) {
                 Text(
                     text = "Patrick Bashizi",
-                    color = MaterialTheme.colors.primary,
+                    color = colorResource(id = R.color.jacksons_purple_500),
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
 
@@ -242,8 +246,6 @@ class MignonDetails : AppCompatActivity() {
                     .width(150.dp)
                     .height(60.dp)
                     .weight(1f)
-
-
             ) {
                 Text(
                     "Adoption",
