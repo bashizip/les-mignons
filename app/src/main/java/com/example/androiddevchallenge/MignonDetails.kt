@@ -174,7 +174,7 @@ class MignonDetails : AppCompatActivity() {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(id = R.drawable.bash),
+                painter = painterResource(id = R.drawable.anita),
                 contentDescription = "",
                 modifier = Modifier
                     .padding(8.dp)
@@ -186,7 +186,7 @@ class MignonDetails : AppCompatActivity() {
 
             ) {
                 Text(
-                    text = "Patrick Bashizi",
+                    text = "Anita Steeves",
                     color = colorResource(id = R.color.jacksons_purple_500),
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
