@@ -14,8 +14,6 @@ A puppy adoption app
 <!--- What are you especially proud of? -->
 Inspired by a design from https://search.muz.li/MzdmYzRjNDNi
 
-<span>Photo by <a href="https://unsplash.com/@eugenechystiakov?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Eugene Chystiakov</a> on <a href="https://unsplash.com/collections/2200239/puppy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
-
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
