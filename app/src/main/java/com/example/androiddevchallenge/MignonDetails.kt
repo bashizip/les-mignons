@@ -62,13 +62,13 @@ class MignonDetails : AppCompatActivity() {
                 Box(modifier = Modifier.fillMaxSize()) {
                     DetailView(mignon = mignon)
                 }
-                MigonInfos(mignon = mignon)
+                MignonInfos(mignon = mignon)
             }
         }
     }
 
     @Composable
-    fun MigonInfos(mignon: Mignon) {
+    fun MignonInfos(mignon: Mignon) {
         Card(
             elevation = 6.dp,
             modifier =
@@ -258,7 +258,7 @@ class MignonDetails : AppCompatActivity() {
     }
 
 
-    @Preview(showBackground = true, widthDp = 360, heightDp = 640, name = "Detail view")
+    @Preview(showBackground = true, widthDp = 480, heightDp = 840, name = "Detail view")
     @Composable
     fun DetailViewPreview() {
         MainLayout(
@@ -273,13 +273,12 @@ class MignonDetails : AppCompatActivity() {
         )
     }
 
-    @Preview(showBackground = true, widthDp = 360, heightDp = 120, name = "Profile")
+    @Preview(showBackground = true, widthDp = 320, heightDp = 120, name = "Profile")
     @Composable
     fun ProfilePreview() {
-        MyTheme {
+        MyTheme(darkTheme = false) {
             Profile()
         }
-
     }
 
     companion object {
